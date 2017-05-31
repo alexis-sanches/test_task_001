@@ -5,8 +5,13 @@
 body {
   box-sizing: border-box;
   font-size: 25px;
-  font-family: Arial, sans-serif;
+  font-family: Tahoma, sans-serif;
   margin: 10px;
+}
+
+input {
+  font-family: Tahoma, sans-serif;
+  margin-left: -2px;
 }
 
 .card {

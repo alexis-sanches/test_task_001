@@ -34,11 +34,6 @@
     }
   }
 
-  function renderExpression(firstNumber, secondNumber, firstContainer, secondContainer) {
-    firstContainer.innerText = firstNumber;
-    secondContainer.innerText = secondNumber;
-  }
-
   function Iteration(digit, order) {
     this.digit = digit;
 
@@ -88,11 +83,15 @@
       this.arrow.appendChild(digitInput);
       this.arrow.appendChild(answer);
     }
-
   }
 
   function isCorrect() {
     return FIRST_NUMBER >= 6 && FIRST_NUMBER <= 9 && FIRST_NUMBER + SECOND_NUMBER >= 11 && FIRST_NUMBER + SECOND_NUMBER <= 14;
+  }
+
+  function renderExpression(firstNumber, secondNumber, firstContainer, secondContainer) {
+    firstContainer.innerText = firstNumber;
+    secondContainer.innerText = secondNumber;
   }
 
   function stylize(obj, num) {
