@@ -1,23 +1,82 @@
+* {
+  box-sizing: inherit;
+}
+
 body {
+  box-sizing: border-box;
   font-size: 25px;
   font-family: Arial, sans-serif;
+  margin: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__expression {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.card__number {
+  display: block;
+  width: 24px;
+  height: 32px;
+  text-align: center;
+}
+
+.card__answer {
+  display: block;
+  width: 40px;
+  height: 32px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.card__number--highlight {
+  border-radius: 2px;
+  background-color: orange;
 }
 
 .card__input {
-  width: 25px;
+  position: absolute;
+  display: block;
+  color: black;
+  width: 24px;
   height: 30px;
   font-size: 28px;
   line-height: 30px;
 }
 
-.card__input--invalid {
-  color: red;
+.card__arrows {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  width: 875px;
+  height: 300px;
 }
 
-canvas {
-  border: 1px solid black;
-  margin: 0;
-  padding: 0;
+.card__arrow {
+  position: absolute;
+  background-image: url(../img/drawsvg.svg);
+  background-repeat: no-repeat;
+  left: 34px;
+  bottom: -20px;
+  width: 785px;
+  height: 200px;
+}
+
+.invisible {
+  display: none;
+}
+
+.invalid {
+  color: red;
 }
 
 .card__ruler {

@@ -7,19 +7,16 @@
   </head>
   <body>
     <div class="card">
-      <div class="card__example">
-        <div class="card__expression">
-          <span class="card__firstNumber"></span> + <span class="card__secondNumber"></span> =
-        </div>
-        <div class="card__container">
-          
-        </div>
-      </div>
-      <div class="card__arrows">
-        <canvas width="875" height="100" id="arrow-field"></canvas>
-        <div class="card__ruler"></div>
+      <div class="card__expression">
+        <span class="card__number card__firstNumber"></span>+<span class="card__number card__secondNumber"></span>=<span class="card__number card__answer">?</span>
       </div>
 
+      <div class="card__arrows">
+        <div class="card__arrow card__firstArrow invisible"></div>
+        <div class="card__arrow card__secondArrow invisible"></div>
+      </div>
+
+      <div class="card__ruler"></div>
     </div>
     <script src="js/script.js"></script>
   </body>
