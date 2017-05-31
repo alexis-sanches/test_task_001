@@ -10,26 +10,29 @@
   var INPUT_HALF_WIDTH = 12;
   var INPUT_HEIGHT = 30;
 
-  var first = new Iteration(FIRST_NUMBER, 'first');
-  var second = new Iteration(SECOND_NUMBER, 'second');
+  init();
 
-  first.left = 0;
-  second.left = FIRST_NUMBER;
+  function init() {
+    var first = new Iteration(FIRST_NUMBER, 'first');
+    var second = new Iteration(SECOND_NUMBER, 'second');
 
-  if (isCorrect()) {
-    renderExpression(first.digit, second.digit, first.card, second.card);
+    first.left = 0;
+    second.left = FIRST_NUMBER;
 
-    first.renderArrow(
-      first.renderInput.bind(
-        first, second.renderArrow.bind(
-          second, second.renderInput.bind(second, getFinalResult)
+    if (isCorrect()) {
+      renderExpression(first.digit, second.digit, first.card, second.card);
+
+      first.renderArrow(
+        first.renderInput.bind(
+          first, second.renderArrow.bind(
+            second, second.renderInput.bind(second, getFinalResult)
+          )
         )
-      )
-    );
-  } else {
-    console.log('Значения находятся за пределами допустимого диапазона');
+      );
+    } else {
+      console.log('Значения находятся за пределами допустимого диапазона');
+    }
   }
-
 
   function renderExpression(firstNumber, secondNumber, firstContainer, secondContainer) {
     firstContainer.innerText = firstNumber;
